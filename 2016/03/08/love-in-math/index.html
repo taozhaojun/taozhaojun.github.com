@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="数学," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="在呆板的数学公式中，也有浪漫的一瞬，最近在电影《少年班》中， 又看到了那个心形公式，想到了当年学习matlab画图的时候，就画了这个，于是乎又心血来潮，把他们又画了一遍。 关于心形曲线的由来，有一个浪漫的版本：  　　1650年，斯德哥尔摩的街头，52岁的笛卡尔邂逅了18岁的瑞典公主克里斯汀。　　那时，落魄、一文不名的笛卡尔过着乞讨的生活，全部的财产只有身上穿的破破烂烂的衣服和随身所带的几本数学书">
+<meta name="keywords" content="数学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学也有浪漫的一面">
+<meta property="og:url" content="http://yoursite.com/2016/03/08/love-in-math/index.html">
+<meta property="og:site_name" content="Zhaojun&#39;s Blog">
+<meta property="og:description" content="在呆板的数学公式中，也有浪漫的一瞬，最近在电影《少年班》中， 又看到了那个心形公式，想到了当年学习matlab画图的时候，就画了这个，于是乎又心血来潮，把他们又画了一遍。 关于心形曲线的由来，有一个浪漫的版本：  　　1650年，斯德哥尔摩的街头，52岁的笛卡尔邂逅了18岁的瑞典公主克里斯汀。　　那时，落魄、一文不名的笛卡尔过着乞讨的生活，全部的财产只有身上穿的破破烂烂的衣服和随身所带的几本数学书">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066d7">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066dd">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066df">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066d9">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066db">
+<meta property="og:updated_time" content="2018-08-24T02:15:10.709Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数学也有浪漫的一面">
+<meta name="twitter:description" content="在呆板的数学公式中，也有浪漫的一瞬，最近在电影《少年班》中， 又看到了那个心形公式，想到了当年学习matlab画图的时候，就画了这个，于是乎又心血来潮，把他们又画了一遍。 关于心形曲线的由来，有一个浪漫的版本：  　　1650年，斯德哥尔摩的街头，52岁的笛卡尔邂逅了18岁的瑞典公主克里斯汀。　　那时，落魄、一文不名的笛卡尔过着乞讨的生活，全部的财产只有身上穿的破破烂烂的衣服和随身所带的几本数学书">
+<meta name="twitter:image" content="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066d7">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/03/08/love-in-math/"/>
+
+
+
+
+
+  <title>数学也有浪漫的一面 | Zhaojun's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zhaojun's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/08/love-in-math/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhaojun TAO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhaojun's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数学也有浪漫的一面</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-08T14:35:17+00:00">
+                2016-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/随记/" itemprop="url" rel="index">
+                    <span itemprop="name">随记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在呆板的数学公式中，也有浪漫的一瞬，最近在电影《少年班》中， 又看到了那个心形公式，想到了当年学习matlab画图的时候，就画了这个，于是乎又心血来潮，把他们又画了一遍。</p>
+<p>关于心形曲线的由来，有一个浪漫的版本：</p>
+<blockquote>
+<p>　　1650年，斯德哥尔摩的街头，52岁的笛卡尔邂逅了18岁的瑞典公主克里斯汀。<br>　　那时，落魄、一文不名的笛卡尔过着乞讨的生活，全部的财产只有身上穿的破破烂烂的衣服和随身所带的几本数学书籍。生性清高的笛卡尔从来不开口请求路人施舍，他只是默默地低头在纸上写写画画，潜心于他的数学世界。<br>　　一个宁静的午后，笛卡尔照例坐在街头，沐浴在阳光中研究数学问题。他如此沉溺于数学世界，身边过往的人群，喧闹的车马队伍。都无法对他造成干扰。<br>　　突然，有人来到他旁边，拍了拍他的肩膀，“你在干什么呢？”扭过头，笛卡尔看到一张年轻秀丽的睑庞，一双清澈的眼睛如湛蓝的湖水，楚楚动人，长长的睫毛一眨一眨的，期待着他的回应。她就是瑞典的小公主，国王最宠爱的女儿克里斯汀。<br>　　她蹲下身，拿过笛卡尔的数学书和草稿纸，和他交谈起来。言谈中，他发现，这个小女孩思维敏捷，对数学有着浓厚的兴趣。<br>　　和女孩道别后，笛卡尔渐渐忘却了这件事，依旧每天坐在街头写写画画。<br>　　几天后，他意外地接到通知，国王聘请他做小公主的数学老师。满心疑惑的笛卡尔跟随前来通知的侍卫一起来到皇宫，在会客厅等候的时候，他听到了从远处传来的银铃般的笑声。转过身，他看到了前儿天在街头偶遇的女孩子。慌忙中，他赶紧低头行礼。<br>　　从此，他当上了公主的数学老师。<br>　　公主的数学在笛卡尔的悉心指导下突飞猛进，他们之间也开始变得亲密起来。笛卡尔向她介绍了他研究的新领域——直角坐标系。通过它，代数与几何可以结合起来，也就是日后笛卡尔创立的解析几何学的雏形。<br>　　在笛卡尔的带领下，克里斯汀走进了奇妙的坐标世界，她对曲线着了迷。每天的形影不离也使他们彼此产生了爱慕之心。<br>　　在瑞典这个浪漫的国度里，一段纯粹、美好的爱情悄然萌发。<br>　　然而，没过多久，他们的恋情传到了国王的耳朵里。国王大怒，下令马上将笛卡尔处死。在克里斯汀的苦苦哀求下，国王将他放逐回国，公主被软禁在宫中。<br>　　当时，欧洲大陆正在流行黑死病。身体孱弱的笛卡尔回到法国后不久，便染上重病。在生命进入倒计时的那段日子，他日夜思念的还是街头偶遇的那张温暖的笑脸。他每天坚持给她写信，盼望着她的回音。然而，这些信都被国王拦截下来，公主一直没有收到他的任何消息。<br>　　在笛卡尔给克里斯汀寄出第十三封信后，他永远地离开了这个世界。此时，被软禁在宫中的小公主依然徘徊在皇宫的走廊里，思念着远方的情人。<br>　　这最后一封信上没有写一句话，只有一个方程：$r=a(1-cosθ)$<br>　　国王看不懂，以为这个方程里隐藏着两个人不可告人的秘密，便把全城的数学家召集到皇宫，但是没有人能解开这个函数式。他不忍看着心爱的女儿每天闷闷不 乐，便把这封信给了她。拿到信的克里斯汀欣喜若狂，她立即明白了恋人的意图，找来纸和笔，着手把方程图形画了出来，一颗心形图案出现在眼前，克里斯汀不禁 流下感动的泪水，这条曲线就是著名的“心形线”。<br>　　国王去世后，克里斯汀继承王位，登基后，她便立刻派人去法国寻找心上人的下落，收到的却是笛卡尔去世的消息，留下了一个永远的遗憾……<br>　　这封享誉世界的另类情书，至今，还保存在欧洲笛卡尔的纪念馆里。</p>
+</blockquote>
+<h2 id="二维心形公式"><a href="#二维心形公式" class="headerlink" title="二维心形公式"></a>二维心形公式</h2><p>当然，这个故事后来被证实是虚构的，不过那个心形公式却流传了下来：</p>
+<p>$$r=a(1−cosθ)$$<br>这个公式是用极坐标表示的，用matlab将它画出来的代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">theta = 0:0.01:2*pi;</span><br><span class="line">rho = 1-cos(theta);</span><br><span class="line">figure</span><br><span class="line">polar(theta,rho,&apos;--r&apos;)</span><br></pre></td></tr></table></figure>
+<p>最后得到<br><img src="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066d7" alt=""><br>经过数学变换，我们可以得到这个公式的其他形式：</p>
+<ul>
+<li>参数方程形式：$$x(t)=a(1-cos(t))cos(t)$$$$y(t)=asint(t)(1-cos(t))$$</li>
+<li>直角坐标形式：$$(ax+x^2+y^2)^2=a^2(x^2+y^2)$$</li>
+</ul>
+<p>不过，这个方程还不是最像桃心的，还有很多更像桃心的方程,比如：</p>
+<p>$$(x^2+y^2-1)^3=x^2y^3$$<br><img src="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066dd" alt=""><br>还有参数方程：</p>
+<p>$$x(t)=tsin(\pi\frac{sin(t)}{t})$$<br>$$y(t)=-|t|cos(\pi\frac{sin(t)}{t})$$<br>在matlab里将他画出，代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">t = linspace(-pi,pi, 350);</span><br><span class="line">X = t .* sin( pi * sin(t)./t);</span><br><span class="line">Y = -abs(t) .* cos( pi * sin(t)./t);</span><br><span class="line">plot(X,Y);</span><br><span class="line">fill(X, Y, &apos;r&apos;);</span><br><span class="line">set(gcf, &apos;Position&apos;, get(0,&apos;Screensize&apos;));</span><br><span class="line">title(&apos;Zhaojun&apos;s Blog&apos;, &apos;FontSize&apos;, 28);</span><br></pre></td></tr></table></figure>
+<p>效果为：<br><img src="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066df" alt=""><br>我还发现对于画函数图像，<a href="http://www.geogebra.org/m/84545" target="_blank" rel="noopener">geogebra</a>和<a href="http://www.wolframalpha.com/input/?i=first+heart+curve" target="_blank" rel="noopener">wolframalpha</a>非常方便，只要输入公式，立马就能得到图像。</p>
+<h2 id="三维心形公式"><a href="#三维心形公式" class="headerlink" title="三维心形公式"></a>三维心形公式</h2><p>在三维空间里，心形公式为：</p>
+<p>$$(x^2+\frac{9y^2}{4}+z^2-1)^3-x^2z^3-\frac{9y^2z^3}{80}=0$$<br>在mathmatica里，我们可以将它画出来：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ContourPlot3D[(x^2 + 9/4 y^2 + z^2 - 1)^3 - x^2 z^3 - 9/80 y^2 z^3 == </span><br><span class="line">  0, &#123;x, -1.3, 1.3&#125;, &#123;y, -1.3, 1.3&#125;, &#123;z, -1.3, 1.3&#125;, PlotPoints -&gt; 15,</span><br><span class="line">  Axes -&gt; True, ContourStyle -&gt; &#123;RGBColor[1, 0.4, 0.7]&#125;]</span><br></pre></td></tr></table></figure>
+<p><img src="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066d9" alt=""><br>在matlab里当然也可以：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">clc,clear</span><br><span class="line">[x,y,z]=<span class="built_in">meshgrid</span>(<span class="built_in">linspace</span>(<span class="number">-3</span>,<span class="number">3</span>,<span class="number">120</span>));</span><br><span class="line">val=(x.^<span class="number">2</span>+(<span class="number">9</span>*y.^<span class="number">2</span>)./<span class="number">4</span>+z.^<span class="number">2</span><span class="number">-1</span>).^<span class="number">3</span>-((<span class="number">9</span>*y.^<span class="number">2</span>).*(z.^<span class="number">3</span>))./<span class="number">80</span>-(x.^<span class="number">2</span>).*(z.^<span class="number">3</span>);</span><br><span class="line">isosurface(x,y,z,val,<span class="number">0</span>); </span><br><span class="line">axis equal;view(<span class="number">-10</span>,<span class="number">24</span>);colormap([<span class="number">1</span> <span class="number">0.2</span> <span class="number">0.2</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="https://leanote.com/api/file/getImage?fileId=56ded105ab64417e590066db" alt=""><br>有没有很漂亮啊？<br>最后附上Jacques Prévert(1900-1977)的爱情诗一首：</p>
+<blockquote>
+<p>Trois allumettes,une à une allumées dans la nuit<br>&lt; La première pour voir ton visage tout entier<br>&lt; La second pour voir test yeux<br>&lt; La dernière pour voir ta bouche<br>&lt; Et l’obscurité tout entière pour me rappeler tout cela<br>&lt; En te serrent dans mes bras </p>
+</blockquote>
+<p>参考文献：<br><a href="http://onemanadreaming.blogspot.fr/2014/08/mathematical-equation-of-love-heart.html" target="_blank" rel="noopener">Mathematical equations of love</a><br><a href="http://www.mathematische-basteleien.de/heart.htm" target="_blank" rel="noopener">heart curve</a><br><a href="http://www.guokr.com/post/60867/" target="_blank" rel="noopener">笛卡尔、公主与心形曲线</a></p>
+<embed src="http://7xrmc0.com1.z0.glb.clouddn.com/musicca%20ira.mp3" autostart="true" width="200" height="80" loop="true">
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数学/" rel="tag"># 数学</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/18/canditat-libre/" rel="next" title="200欧拿到法国驾照">
+                <i class="fa fa-chevron-left"></i> 200欧拿到法国驾照
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/17/circle-surface/" rel="prev" title="如何计算圆的面积">
+                如何计算圆的面积 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Zhaojun TAO</p>
+              <p class="site-description motion-element" itemprop="description">你若安好，便是晴天</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#二维心形公式"><span class="nav-number">1.</span> <span class="nav-text">二维心形公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三维心形公式"><span class="nav-number">2.</span> <span class="nav-text">三维心形公式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhaojun TAO</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
