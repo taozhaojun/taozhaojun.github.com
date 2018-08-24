@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>LATEX使用总结 | Zhaojun&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="今天主要总结了latex的一些基本配置和使用latex进行科技论文写作的基本要素（书写文档，插入表格，插入图片，插入数学公式） latex文档latex是文档书写的利器。 latex文档结构首先来看一个简单的例子：123456789101112131415161718#导言区\documentclass[12pt ,a4paper]&amp;#123;article&amp;#125;\usepackage&amp;#1">
+<meta name="keywords" content="latex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LATEX使用总结">
+<meta property="og:url" content="http://yoursite.com/2016/10/17/latex-summary/index.html">
+<meta property="og:site_name" content="Zhaojun&#39;s Blog">
+<meta property="og:description" content="今天主要总结了latex的一些基本配置和使用latex进行科技论文写作的基本要素（书写文档，插入表格，插入图片，插入数学公式） latex文档latex是文档书写的利器。 latex文档结构首先来看一个简单的例子：123456789101112131415161718#导言区\documentclass[12pt ,a4paper]&amp;#123;article&amp;#125;\usepackage&amp;#1">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56dc716aab64417e59004eb8">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f54">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f58">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f55">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f53">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f56">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f57">
+<meta property="og:image" content="http://of6xzt6jd.bkt.clouddn.com/equation1.JPG">
+<meta property="og:image" content="http://of6xzt6jd.bkt.clouddn.com/equation2.JPG">
+<meta property="og:image" content="http://of6xzt6jd.bkt.clouddn.com/equation3.JPG">
+<meta property="og:image" content="http://of6xzt6jd.bkt.clouddn.com/equation4.JPG">
+<meta property="og:image" content="http://of6xzt6jd.bkt.clouddn.com/equation5.JPG">
+<meta property="og:updated_time" content="2018-08-24T02:15:10.669Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LATEX使用总结">
+<meta name="twitter:description" content="今天主要总结了latex的一些基本配置和使用latex进行科技论文写作的基本要素（书写文档，插入表格，插入图片，插入数学公式） latex文档latex是文档书写的利器。 latex文档结构首先来看一个简单的例子：123456789101112131415161718#导言区\documentclass[12pt ,a4paper]&amp;#123;article&amp;#125;\usepackage&amp;#1">
+<meta name="twitter:image" content="https://leanote.com/api/file/getImage?fileId=56dc716aab64417e59004eb8">
+  
+    <link rel="alternate" href="/atom.xml" title="Zhaojun&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Zhaojun&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-latex-summary" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/17/latex-summary/" class="article-date">
+  <time datetime="2016-10-17T14:44:18.000Z" itemprop="datePublished">2016-10-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工具/">工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LATEX使用总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天主要总结了latex的一些基本配置和使用latex进行科技论文写作的基本要素（书写文档，插入表格，插入图片，插入数学公式）</p>
+<h1 id="latex文档"><a href="#latex文档" class="headerlink" title="latex文档"></a>latex文档</h1><p>latex是文档书写的利器。</p>
+<h2 id="latex文档结构"><a href="#latex文档结构" class="headerlink" title="latex文档结构"></a>latex文档结构</h2><p>首先来看一个简单的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#导言区</span><br><span class="line">\documentclass[12pt ,a4paper]&#123;article&#125;</span><br><span class="line">\usepackage&#123;xeCJK&#125;%使用 xeCJK 宏包</span><br><span class="line">\usepackage&#123;fontspec&#125;</span><br><span class="line">\usepackage&#123;titlesec&#125;</span><br><span class="line">%中文断行</span><br><span class="line">\XeTeXlinebreaklocale &quot;zh&quot;</span><br><span class="line">\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt</span><br><span class="line">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span><br><span class="line">#正文区</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\title&#123;金属材料高温氧化过程中的应力研究&#125;</span><br><span class="line">\author&#123;陶兆君&#125;</span><br><span class="line">\date&#123;\today&#125;</span><br><span class="line">\maketitle</span><br><span class="line">\section&#123;介绍&#125;</span><br><span class="line">\section&#123;正文&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure></p>
+<p>一般论文都用 article 文档类，这里设置正文12pt 的字号，使用 A4 纸。以\开头的表示LATEX中的命令。\usepackage{} 命令表示使用宏<br>包，比如 xeCJK 宏包可以支持中文字体，titlesec宏包用于更改大标题的样式。每种宏包都提供各自的命令。\usepackage{} 命令就相当于 C 语言中的 include 命令，而宏包就相当于头文件。<br>我们一般在导言区配置我们需要的各种设置，而在正文区正式开始写文章。</p>
+<h2 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h2><p>实现中文字体的方法有很多种，而我一般使用的，就是上个例子中用的xeCJK宏包。需要注意的是，要使用这个宏包的话，编译器要用xelax。</p>
+<h3 id="中文字体"><a href="#中文字体" class="headerlink" title="中文字体"></a>中文字体</h3><p>中文字体也有很多种，什么宋体，黑体等等，如何在他们之间快速切换呢？请看代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\setCJKfamilyfont&#123;zhsong&#125;&#123;SimSun&#125; %宋体</span><br><span class="line">\setCJKfamilyfont&#123;zhhei&#125;&#123;SimHei&#125; % 黑体</span><br><span class="line">\setCJKfamilyfont&#123;zhfs&#125;&#123;FangSong&#125; %仿宋</span><br><span class="line">\setCJKfamilyfont&#123;zhkai&#125;&#123;KaiTi&#125; %楷体</span><br><span class="line">\newcommand*&#123;\song&#125;&#123;\CJKfamily&#123;zhsong&#125;&#125; % 宋体</span><br><span class="line">\newcommand*&#123;\hei&#125;&#123;\CJKfamily&#123;zhhei&#125;&#125; % 黑体</span><br><span class="line">\newcommand*&#123;\kai&#125;&#123;\CJKfamily&#123;zhkai&#125;&#125; % 楷书</span><br><span class="line">\newcommand*&#123;\fangsong&#125;&#123;\CJKfamily&#123;zhfs&#125;&#125; % 仿宋</span><br></pre></td></tr></table></figure></p>
+<p>前面4行第二个花括号里的必须是电脑中安装的字体名称，也可以直接写中文，比如 SimSun 就用宋体代替，SimHei就用黑体代替。第一个花括号内的是自定的名称，要与后面4行相对应。\newcommand是定<br>义一个新的命令，以后在文中如果想使用这些字体，那么就这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;\hei 这是一段黑体的文字，&#125;&#123;\song 这是一段楷体的文字，&#125;&#123;\fangsong 这是仿宋，&#125;&#123;\kai 这是楷体。&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样就实现了对应文字用对应字体。看效果可以点<a href="https://www.sharelatex.com/project/56dc5f52e29abebc323e48d0" target="_blank" rel="noopener">这里</a></p>
+<h3 id="中文字号"><a href="#中文字号" class="headerlink" title="中文字号"></a>中文字号</h3><p>中文习惯用几号几号来表示字的大小，而英文习惯用磅数来表示字号的大小，他们如何转换呢？我们通过自定义命令来实现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\newcommand&#123;\erhao&#125;&#123;\fontsize&#123;22pt&#125;&#123;\baselineskip&#125;\selectfont&#125;%二号</span><br><span class="line">\newcommand&#123;\xiaoer&#125;&#123;\fontsize&#123;18pt&#125;&#123;\baselineskip&#125;\selectfont&#125;%小二</span><br><span class="line">\newcommand&#123;\sanhao&#125;&#123;\fontsize&#123;16pt&#125;&#123;\baselineskip&#125;\selectfont&#125;%三号</span><br><span class="line">\newcommand&#123;\xiaosan&#125;&#123;\fontsize&#123;15pt&#125;&#123;\baselineskip&#125;\selectfont&#125;%小三</span><br><span class="line">\newcommand&#123;\sihao&#125;&#123;\fontsize&#123;14pt&#125;&#123;\baselineskip&#125;\selectfont&#125;%四号</span><br><span class="line">\newcommand&#123;\xiaosi&#125;&#123;\fontsize&#123;12pt&#125;&#123;\baselineskip&#125;\selectfont&#125;%小四</span><br><span class="line">\newcommand&#123;\wuhao&#125;&#123;\fontsize&#123;10.5pt&#125;&#123;\baselineskip&#125;\selectfont&#125;%五号</span><br><span class="line">\newcommand&#123;\xiaowu&#125;&#123;\fontsize&#123;9pt&#125;&#123;\baselineskip&#125;\selectfont&#125;%小五</span><br></pre></td></tr></table></figure></p>
+<p>同样要使用这些字号，我们可以这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;\erhao 这是二号字，&#125;&#123;\sanhao 这是三号字，&#125;&#123;\wuhao 这是五号字。&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果可以看<a href="https://www.sharelatex.com/project/56dc5f52e29abebc323e48d0" target="_blank" rel="noopener">这里</a></p>
+<h3 id="中文重定义"><a href="#中文重定义" class="headerlink" title="中文重定义"></a>中文重定义</h3><p>LATEX的一大特点就是在你自定义完模版后可以实现自动的排版。比如插入一个表格，表<br>头是这样的：“表 1.1：标题”。在插入表格时实际只需要输入“标题”,“表 1.1：”是LATEX自己加上去的。由于LATEX默认是英文，所以如果不加设置的话，实际的效果是：“table1.1：标<br>题”。这对中文论文来说显然是不行的。还有很多类似的地方需要重新设置。在导言区中加入<br>如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\renewcommand&#123;\contentsname&#125;&#123;目录&#125;</span><br><span class="line">\renewcommand&#123;\listfigurename&#125;&#123;插图目录&#125;</span><br><span class="line">\renewcommand&#123;\listtablename&#125;&#123;表格目录&#125;</span><br><span class="line">\renewcommand&#123;\refname&#125;&#123;参考文献&#125;</span><br><span class="line">\renewcommand&#123;\abstractname&#125;&#123;摘\ 要&#125;</span><br><span class="line">\renewcommand&#123;\indexname&#125;&#123;索引&#125;</span><br><span class="line">\renewcommand&#123;\tablename&#125;&#123;表&#125;</span><br><span class="line">\renewcommand&#123;\figurename&#125;&#123;图&#125;</span><br><span class="line">\newtheorem&#123;theorem&#125;&#123;定理&#125;</span><br><span class="line">\newtheorem&#123;definition&#125;&#123;定义&#125;</span><br><span class="line">\newtheorem&#123;property&#125;&#123;问题&#125;</span><br><span class="line">\newtheorem&#123;proposition&#125;&#123;猜测&#125;</span><br><span class="line">\newtheorem&#123;lemma&#125;&#123;引理&#125;</span><br><span class="line">\newtheorem&#123;corollary&#125;&#123;推论&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样就对中文进行了重定义。</p>
+<h3 id="关于宏包"><a href="#关于宏包" class="headerlink" title="关于宏包"></a>关于宏包</h3><p>如果大家在编译时遇到错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">! Undefined control sequence.</span><br></pre></td></tr></table></figure></p>
+<p>那么多半是哪个宏包没有加进去，简答的做法，当然就是先把所有常用的宏包都加进去。我们在导言区加入如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;fancyhdr&#125;%页眉页脚</span><br><span class="line">\usepackage&#123;xeCJK&#125; %中文支持</span><br><span class="line">\usepackage&#123;fontspec&#125;%字体</span><br><span class="line">\usepackage&#123;titlesec&#125;%标题格式</span><br><span class="line">\usepackage[top=2.5cm,bottom=2.5cm, left=2cm, right=2cm]&#123;geometry&#125;%页边距</span><br><span class="line">\usepackage&#123;amsmath&#125; %数学公式</span><br><span class="line">\usepackage&#123;amssymb&#125;</span><br><span class="line">\usepackage&#123;amscd&#125;</span><br><span class="line">\usepackage&#123;listings&#125;%插入代码</span><br><span class="line">\usepackage&#123;xcolor&#125; %字体颜色</span><br><span class="line">\usepackage&#123;graphicx&#125; %插入图片</span><br><span class="line">\usepackage&#123;subfig&#125; %子图</span><br><span class="line">\usepackage&#123;tabularx&#125;%插入表格</span><br><span class="line">\usepackage&#123;indentfirst&#125; %首行缩进</span><br><span class="line">\usepackage&#123;array&#125;</span><br><span class="line">\usepackage&#123;longtable&#125;%长表格</span><br><span class="line">\usepackage&#123;multirow&#125;%使用多栏宏包</span><br><span class="line">\usepackage&#123;wrapfig&#125;%文字环绕</span><br><span class="line">\usepackage&#123;booktabs&#125;</span><br><span class="line">\usepackage&#123;extarrows&#125;</span><br><span class="line">\usepackage&#123;ulem&#125;</span><br><span class="line">\usepackage&#123;txfonts&#125;</span><br><span class="line">\usepackage&#123;bm&#125;</span><br><span class="line">\usepackage&#123;cite&#125;%参考文献</span><br><span class="line">\usepackage[super,square,comma, sort&amp;compress]&#123;natbib&#125;</span><br><span class="line">\usepackage&#123;setspace&#125;%设定行距</span><br><span class="line">\usepackage[colorlinks , linkcolor=black ,anchorcolor=black , citecolor=black ,</span><br><span class="line">CJKbookmarks=True]&#123;hyperref&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对于中文文章，格式要求首行缩进两个中文字符，所以首先添加 indentfirst 宏包，并且<br>在导言区加入以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\setlength&#123;\parindent&#125;&#123;2.45em&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样就实现了缩进两个中文字符。</p>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>书写科技论文当然离开不了表格，那么LATEX中如何书写表格呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;[htp] %浮动表格环境</span><br><span class="line">\centering %表格居中放置 </span><br><span class="line">\caption&#123;这里是表头&#125;</span><br><span class="line">\label&#123;tab1&#125; %用于引用</span><br><span class="line">\begin&#123;tabular&#125;&#123;c|c|c|c|c&#125;%表格环境</span><br><span class="line">\toprule[1.4pt] %1.4pt 的上划线</span><br><span class="line">&amp;x1&amp;x2&amp;x3&amp;x4\\\hline %\hline表示画一条横线</span><br><span class="line">A&amp;3&amp;4&amp;2&amp;1\\\hline</span><br><span class="line">B&amp;2&amp;5&amp;4&amp;3\\\hline</span><br><span class="line">C&amp;5&amp;4&amp;3&amp;1\\\hline</span><br><span class="line">D&amp;3&amp;3&amp;2&amp;4\\</span><br><span class="line">\bottomrule[1.4pt]%1.4pt 的下划线</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样就得到一个最基本的表格：<br><img src="https://leanote.com/api/file/getImage?fileId=56dc716aab64417e59004eb8" alt=""><br>通常来说\begin{tabular}就是一个表格环境，但是这个表格是紧接着前面的文字的，并且其后的文字也会紧跟在后面，无法像表1一样单独占据一个空行的位置。代码第一行\begin{table}表示浮动表格的环境，[htp]是可选参数，也可以不加。h(here) 表示这个浮动体放在当前位置，b(bottom) 表示放在一页的底部，t(top) 表示放在一页的最顶上，p表示放在一个浮动页（单独一页）。三个参数都加表示让LA TEX来自动判断并选择最合适的情况。通常<br>LATEX都会自己判断并选择最合适的情况，如果自己想强制放在某个位置，可以加!，比如[!h] 表示强制放在当前位置。tarbular 环境后的 {c|c|c|c|c}，其中一共有5个c 表示表格有五列，|表示画竖线，c表示居中。c也可以换成别的，比如r(居右)，f(居左)。<br>对于表格的每一行，使用&amp;将列隔开，使用\换行到下一行。\hline 表示画一条横线。对于表格最上和最下的横线，加粗可能会更好看，所以可以用\toprule[1.4pt]将最上的横线设为1.4pt的宽度。对最下的横线使用 \bottomrule[1.4pt]。</p>
+<h2 id="表格自定义"><a href="#表格自定义" class="headerlink" title="表格自定义"></a>表格自定义</h2><p>当然如果需要更漂亮的表格，那么就需要自定义了：</p>
+<h3 id="列宽"><a href="#列宽" class="headerlink" title="列宽"></a>列宽</h3><p>有时表格看起来有点窄，如果宽点应该会更好看，那么如何实现呢？这个很好实现，只需要将表格的第一行的每一列设置一个宽度就可以了，其实就是将上面代码中的 &amp;x1&amp;x2&amp;x3&amp;x4改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\makebox[3em]&#123;&#125;&amp;\makebox[6em]&#123;x1&#125;&amp;\makebox[6em]&#123;x2&#125;&amp;\makebox[6em]&#123;x3&#125;&amp;\makebox[6em]&#123;x4&#125;\\\ hline</span><br></pre></td></tr></table></figure></p>
+<p>其中\makebox[宽度]{文本} 表示生成一个 [宽度] 的盒子，这样第一列的宽度就是3em，第二列到第五列的宽度都设为了6em。em是长度单位，表示当前字体的字符”M” 的宽度。也可以用 cm、mm、pt 等等。</p>
+<h3 id="行宽"><a href="#行宽" class="headerlink" title="行宽"></a>行宽</h3><p>有了列宽，自然想到有时我们需要调整行宽，这就需要盒子：<br>\parbox[c][3em][c]6em{文本} 表示生成一个竖直长度为3em，水平长度为 6em 的盒子。c 表示本文居中放置，也可以使用 r(right)，l(left)。</p>
+<h3 id="跨行跨列表格"><a href="#跨行跨列表格" class="headerlink" title="跨行跨列表格"></a>跨行跨列表格</h3><p>现在想实现一个如图所示的表格。可以看出，出行方式其实占了两行，而出行目的其实占了三列。<br><img src="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f54" alt=""></p>
+<p>要使用跨行跨列表格，首先要添加multirow宏包，在导言区加上\usepackage{multirow}.<br>对于跨行，可以使用\multirow命令，该命令格式为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\multirow&#123;要合并的行数&#125;&#123;该栏文本的宽度&#125;&#123;文本&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果想让LATEX自行决定文本的宽度，就在“该栏文本宽度”这个参数里使用*.<br>对于跨列，可以使用 \multicolumn 命令，格式为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\multicolumn&#123;要合并的列数&#125;&#123;对齐方式&#125;&#123;文本&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中对齐方式可以选择 c(居中)，r(居右)，l(居左)。<br>综合跨行跨列的操作，我们可以得到上图中表格的代码为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;[h]</span><br><span class="line">\begin&#123;center&#125;</span><br><span class="line">\caption&#123;跨行跨列表格&#125;</span><br><span class="line">\begin&#123;tabular&#125;&#123;cccc&#125;</span><br><span class="line">\toprule[1.4pt]</span><br><span class="line">\multirow&#123;2&#125;&#123;*&#125;&#123;出行方式&#125; &amp; \multicolumn&#123;3&#125;&#123;c&#125;&#123;出行目的&#125; \\ \cline&#123;2-4&#125;</span><br><span class="line">&amp; 工作商务出行 &amp; 非工作出行 &amp; 上学出行 \\\hline</span><br><span class="line">公交车 &amp; 28.16 &amp; 6.35 &amp; 3.18 \\\hline</span><br><span class="line">出租车 &amp; 38 &amp; 8.57 &amp; 4.3 \\\hline</span><br><span class="line">社会小车 &amp; 49 &amp; 11 &amp; 5.5 \\\hline</span><br><span class="line">各出行所占比例 &amp; 25.10\% &amp; 71.30\% &amp; 3.60\% \\</span><br><span class="line">\bottomrule[1.4pt]</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">\label&#123;tab5&#125;</span><br><span class="line">\end&#123;center&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="表格总结"><a href="#表格总结" class="headerlink" title="表格总结"></a>表格总结</h2><p>从上面的例子可以看出，LATEX中处理表格还是比较麻烦的，如果需要处理表格，也可以先用其他软件处理（excel等），再转换成LATEX，我也用过emacs的org-mode，org-mode里处理表格就像markdown一样直观，而且有各种tab快捷键，还可以直接导出LATEX格式。</p>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>首先要说明一点，LATEX中插入图片是一件比较头疼的事情，在这一点上比不过Word。<br>尽管如此，在掌握熟练以后还是能比较轻松地实现图片的插入的。</p>
+<h2 id="最简单的例子"><a href="#最简单的例子" class="headerlink" title="最简单的例子"></a>最简单的例子</h2><p>插入图片需要在导言段加入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;graphicx&#125; %插入图片</span><br></pre></td></tr></table></figure></p>
+<p>最简单的插入图片的代码为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;[htp] %图片浮动环境，类似表格中的 table [htp] 参数和表格的类似</span><br><span class="line">\centering %图片居中</span><br><span class="line">\includegraphics[scale=0.1]&#123;picture.jpg&#125;%插入图片，设置图片的高度，图片的文件名</span><br><span class="line">\caption&#123;&#125;%图片的标题</span><br><span class="line">\label&#123;&#125; %引用</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure></p>
+<p>[htp]这个参数和表格中的一样，就不赘述了。\includegraphics{}命令用于插入图片，[]中是可选参数，不加默认为图片原始大小。[height=10cm] 表示图片的高度为 10cm，[width=5cm]表示图片的宽度为5cm。在只加这一个参数的情况下会保持图片的比例不变。如果是[height=10cm,width=5cm]，则插入图片的高度为 10cm，宽度 5cm，比例可能就改变了。另一种方法是 [scale=2]，表示图片是原始大小的 2 倍。{} 中是图片的位置，如果图片在当前路径下输入图片的文件名就行。</p>
+<h2 id="复杂点的情况"><a href="#复杂点的情况" class="headerlink" title="复杂点的情况"></a>复杂点的情况</h2><h3 id="并排摆放，共享标题"><a href="#并排摆放，共享标题" class="headerlink" title="并排摆放，共享标题"></a>并排摆放，共享标题</h3><p>这里演示将两张图片并排摆放，并且共享标题。使用如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;[h]</span><br><span class="line">\centering</span><br><span class="line">\includegraphics[height=7cm]&#123;picture1.jpg&#125;</span><br><span class="line">\includegraphics[height=7cm]&#123;picture2.jpg&#125;</span><br><span class="line">\caption&#123;并排摆放，共享标题&#125;</span><br><span class="line">\label&#123;pic : fig1&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果为：<br><img src="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f58" alt=""></p>
+<h3 id="并排摆放，各有标题"><a href="#并排摆放，各有标题" class="headerlink" title="并排摆放，各有标题"></a>并排摆放，各有标题</h3><p>如果想实现两个图片各有各的标题，那就需要使用minipage。<br>minipage的使用格式为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;minipage&#125;[aligned]&#123;width&#125;...\end&#123;minipage&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中 aligned 为对齐方式，c、t、b分别表示中线、顶行、低行与当前基线对齐。如果不加这个可选参数则默认是c。参数 width 表示 minipage 的宽度。<br>我们先来看效果：<br><img src="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f55" alt=""><br>实现他的代码为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;[h]</span><br><span class="line">\begin&#123;minipage&#125;&#123;0.5\textwidth&#125;</span><br><span class="line">\centering</span><br><span class="line">\includegraphics[width=\textwidth]&#123;picture1.jpg&#125;</span><br><span class="line">\caption&#123;扩散 5 小时&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">\begin&#123;minipage&#125;&#123;0.5\textwidth&#125;</span><br><span class="line">\centering</span><br><span class="line">\includegraphics[width=\textwidth]&#123;picture2.jpg&#125;</span><br><span class="line">\caption&#123;扩散 7 小时&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中，\textwidth表示当前页面的宽度。</p>
+<h3 id="并排摆放，共享标题，各有子标题"><a href="#并排摆放，共享标题，各有子标题" class="headerlink" title="并排摆放，共享标题，各有子标题"></a>并排摆放，共享标题，各有子标题</h3><p>如果想要两幅并排的图片共享标题，并各有子标题，可以使用subfig宏包提供的\subfloat命令。效果如下图所示。<br><img src="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f53" alt=""><br>可以直接使用 \subfloat命令实现这个功能，但是如果图片的标题超出了图片的宽度，就会出现折行，所以最好的办法是在 \subfloat 命令里面嵌套一个 minipage，因为 minipage 是有宽度的。代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;[htbp]</span><br><span class="line">\subfloat[扩散五小时]&#123;</span><br><span class="line">\begin&#123;minipage&#125;&#123;0.5\textwidth&#125;</span><br><span class="line">\centering</span><br><span class="line">\label&#123;pic : figh_5&#125;</span><br><span class="line">\includegraphics[width=\textwidth]&#123;picture1.jpg&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">&#125;</span><br><span class="line">\subfloat[扩散七小时]&#123;</span><br><span class="line">\begin&#123;minipage&#125;&#123;0.5\textwidth&#125;</span><br><span class="line">\centering</span><br><span class="line">\includegraphics[width=\textwidth]&#123;picture2.jpg&#125;</span><br><span class="line">\label&#123;pic : figh_7&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">&#125;</span><br><span class="line">\caption&#123;PM2.5浓度随扩散时间的变化&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="关于画图片的软件"><a href="#关于画图片的软件" class="headerlink" title="关于画图片的软件"></a>关于画图片的软件</h3><p>LATEX可以支持很多种的图片格式，有矢量图格式，也有位图格式。个人建议最好使用矢量图（某些特殊情况除外），因为矢量图在放大缩小后不会变得模糊，最清晰，而且也可以让读者复制图片中的文字。<br>这里再说说我用的制图软件，画示意图我一般用的是GeoGebra，流程图用的是 Dia，矢量绘图软件用的是Inkscape。他们都是开源免费的软件，GeoGebra还有网页版，可以直接在浏览器里编辑图片，画流程图的话，网页版的<a href="https://www.draw.io/" target="_blank" rel="noopener">draw.io</a>和<a href="https://cacoo.com/diagrams/" target="_blank" rel="noopener">cacoo</a>也不错。</p>
+<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><p>终于到了最激动人心也是LATEX最擅长的一部分了！</p>
+<h2 id="一些简单的数学公式"><a href="#一些简单的数学公式" class="headerlink" title="一些简单的数学公式"></a>一些简单的数学公式</h2><p>输入行间公式，比如这样 $f(x) = xsin x^3$ ，使用\$…\$。输入行内公式，比如<br>$$f(x) = xsin x^3$$<br>使用 \$\$…\$\$. 如果想要让公式编号，则使用 equation 环境：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;...\end&#123;equation&#125;</span><br></pre></td></tr></table></figure></p>
+<p>一些希腊字母的输入如图：<br><img src="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f56" alt=""><br>一些小帽子的输入如图：<br><img src="https://leanote.com/api/file/getImage?fileId=56dca2a4ab64417e59004f57" alt=""><br>如果使用的是 texmaker编辑器，很多数学公式可以直接从工具栏里面找到，也没有必要去背这些东西。Windows用户可以下载安装MathType，这个软件可以用鼠标点击输入数学公式，然后导出LATEX的代码，也很方便。Linux 用户可以下载安装 EqualX，也有类似功能。还可以使用<a href="https://www.codecogs.com/latex/eqneditor.php?lang=zh-cn" target="_blank" rel="noopener">在线LATEX公式编辑器</a>，在线编辑公式，也很方便。</p>
+<h2 id="稍微高级的应用"><a href="#稍微高级的应用" class="headerlink" title="稍微高级的应用"></a>稍微高级的应用</h2><p>输入数学公式有的时候没有看起来那么简单，可能会对数学公式有一些要求，也可能会遇到许多的问题。</p>
+<h3 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h3><p>括号很简单，但是要做到美观还是需要注意一些的。比如这个<br>$$（\frac{a}{b}）$$<br>显然就不美观，括号太小。可以让LATEX自动调整括号的大小：<br>使用代码为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\left(\frac&#123;a&#125;&#123;b&#125;\right)</span><br></pre></td></tr></table></figure></p>
+<p>效果为：<br>$$\left(\frac{a}{b}\right)$$<br>对小括号和中括号，左括号分别是 \left(和 \right[，但是对大括号，左括号就变为 \left{。注意其中的区别，大括号多了一个\。<br>对于中括号和大括号代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\left[\frac&#123;a&#125;&#123;b&#125;\right]</span><br><span class="line">\left\&#123;\frac&#123;a&#125;&#123;b&#125;\right\&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="http://of6xzt6jd.bkt.clouddn.com/equation1.JPG" alt=""><br>经常需要使用大括号，比如下面这种情况:<br><img src="http://of6xzt6jd.bkt.clouddn.com/equation2.JPG" alt=""><br>实现的代码为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125; \label&#123;eq1&#125;</span><br><span class="line">f(x)=\left \&#123;</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">&amp;x=\cos(t) \\</span><br><span class="line">&amp;y=\sin(t) \\</span><br><span class="line">&amp;z=\frac&#123;x&#125;&#123;y&#125;</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">\right .</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中&amp;表示对齐的位置。还可以使用array环境，和tabular完全类似：<br><img src="http://of6xzt6jd.bkt.clouddn.com/equation3.JPG" alt=""><br>实现的代码为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">F=\left \&#123;</span><br><span class="line">\begin&#123;array&#125;&#123;rcl&#125;</span><br><span class="line">A&amp;&amp; &#123;0&lt; S_L&#125;\\</span><br><span class="line">B&amp;&amp; &#123;S_L \leq 0 &lt; S_M&#125;\\</span><br><span class="line">C&amp;&amp; &#123;S_M \leq 0 &lt; S_R&#125;\\</span><br><span class="line">D&amp;&amp; &#123;S_R \leq 0&#125;</span><br><span class="line">\end&#123;array&#125; </span><br><span class="line">\right .</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure></p>
+<p>还有 cases 环境：<br><img src="http://of6xzt6jd.bkt.clouddn.com/equation4.JPG" alt=""><br>实现的代码为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">f(x)=</span><br><span class="line">\begin&#123;cases&#125;</span><br><span class="line">0&amp; x=0\\</span><br><span class="line">1&amp; x!=0</span><br><span class="line">\end&#123;cases&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意，cases 环境不需要自己输入大括号，但是前两种情况需要自己输入大括号。显然，上面的公式只有左大括号，而没有右大括号，这个时候也不能直接忽略右大括号，因为左和右是配对的，所以上面的公式中在 \left{左大括号的最后需要 \right. 与之配对。注意，right后面有一个点。</p>
+<h3 id="长公式"><a href="#长公式" class="headerlink" title="长公式"></a>长公式</h3><p>有时我们的公式非常长，这就需要将公式分成多行，我们一般使用multline环境：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;multline&#125;</span><br><span class="line">c(x,y,z)=\sin&#123;x&#125;\sin&#123;y&#125;\sin&#123;z&#125;\frac&#123;Q&#125;&#123;4\pi\sqrt&#123;(D_y+D_&#123;y&apos;&#125;−D_&#123;my&#125;)(D_z+D_&#123;z&apos;&#125;−D_&#123;mz&#125;)&#125;&#125;\times\exp\left[−\frac&#123;u&#125;&#123;4x&#125;\left(\frac&#123;y^2&#125;&#123;D_y+D_&#123;y&apos;&#125;−D&#123;my&#125;&#125;+\frac&#123;z^2&#125;&#123;D_z+D_&#123;z&apos;&#125;−D_&#123;mz&#125;&#125;\right) \right]</span><br><span class="line">\end&#123;multline&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="http://of6xzt6jd.bkt.clouddn.com/equation5.JPG" alt=""></p>
+<h3 id="多行公式"><a href="#多行公式" class="headerlink" title="多行公式"></a>多行公式</h3><p>有的时候经常需要输入多行公式，这又分好几种情况：</p>
+<h4 id="每个子公式都有编号"><a href="#每个子公式都有编号" class="headerlink" title="每个子公式都有编号"></a>每个子公式都有编号</h4><p>这里使用align环境，看起来和连续使用两个equation环境一样，但是连续使用两个equation换进会使得这两个公式之间的距离过大。如果不想编号，在align后面加上*就行了。代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;align&#125;</span><br><span class="line">&amp; f(x)=x^3 \label&#123;eq: rel1&#125; \\</span><br><span class="line">&amp; g(x)=\sin&#123;x&#125; \label&#123;eq: rel2&#125;</span><br><span class="line">\end&#123;align&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="只有一个编号在中间位置"><a href="#只有一个编号在中间位置" class="headerlink" title="只有一个编号在中间位置"></a>只有一个编号在中间位置</h4><p>比如让两个公式共用一个公式编号，代码为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;eq:12&#125;</span><br><span class="line">\begin&#123;split&#125;</span><br><span class="line">&amp; f(x)=x^3 \\</span><br><span class="line">&amp; g(x)=\sin&#123;x&#125;</span><br><span class="line">\end&#123;split&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>这里总结了LATEX的一些基本用法，当然在文献写作过程中还有一些技巧是必不可少的（比如参考文献管理，章节管理等），这要不断使用LATEX,慢慢地我们就可以掌握这些技巧，最后再给大家推荐在线LATEX编辑器：<a href="https://www.sharelatex.com/" target="_blank" rel="noopener">sharelatex</a>和<a href="https://www.overleaf.com/dash" target="_blank" rel="noopener">Overleaf</a>,他们提供了丰富的LATEX模板，不管是写CV还是写论文，直接在上面找一个喜欢的模板，然后开始写作吧。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/17/latex-summary/" data-id="cjl7fqmjv000m8w5s79mnqfxp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/latex/">latex</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/02/ipad/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ipad和电脑双向同步文献的奥秘
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/17/hook-s-law/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">一步一步认识胡克定律</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cloud9/">cloud9</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ipad/">ipad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/latex/">latex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stories/">stories</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tricks/">tricks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zotero/">zotero</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/坚果云/">坚果云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/法国/">法国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/相机/">相机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移民/">移民</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/蒙特利尔/">蒙特利尔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/驾照/">驾照</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/ipad/" style="font-size: 10px;">ipad</a> <a href="/tags/latex/" style="font-size: 10px;">latex</a> <a href="/tags/stories/" style="font-size: 10px;">stories</a> <a href="/tags/tricks/" style="font-size: 20px;">tricks</a> <a href="/tags/zotero/" style="font-size: 10px;">zotero</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/坚果云/" style="font-size: 10px;">坚果云</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/法国/" style="font-size: 10px;">法国</a> <a href="/tags/相机/" style="font-size: 10px;">相机</a> <a href="/tags/移民/" style="font-size: 20px;">移民</a> <a href="/tags/蒙特利尔/" style="font-size: 15px;">蒙特利尔</a> <a href="/tags/驾照/" style="font-size: 10px;">驾照</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/13/quebec-arriving/">2018年5月蒙特利尔长登3周小记</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/12/procedure-immigration/">移民过程记录</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/30/one_week_in_montreal/">2018年1月蒙特利尔短登一周经验分享</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/02/cloud9/">用github和cloud9创建自己的博客</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/02/ipad/">ipad和电脑双向同步文献的奥秘</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Zhaojun TAO<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
