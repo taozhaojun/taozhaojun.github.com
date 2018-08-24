@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>一步一步认识胡克定律 | Zhaojun&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="初中学了简单了胡克定律，高中的时候力变成了向量，而大学里应力应变都变成了2阶张量，同样是胡克定律，在不同的尺度下，却有不同的含义。 标量尺度我们初中学过胡克定律，即在弹性范围内，弹簧的伸长和所施加的力成正比：用公式表达就是：这里k是一个实数，表明了弹簧的性质，当弹簧压缩时，该式任然成立，只是F和X前面变成了负号。 向量尺度高中时，力F变成了向量，位移X也变成了向量，什么是向量？既有大小又有方向的量">
+<meta name="keywords" content="tricks">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一步一步认识胡克定律">
+<meta property="og:url" content="http://yoursite.com/2016/08/17/hook-s-law/index.html">
+<meta property="og:site_name" content="Zhaojun&#39;s Blog">
+<meta property="og:description" content="初中学了简单了胡克定律，高中的时候力变成了向量，而大学里应力应变都变成了2阶张量，同样是胡克定律，在不同的尺度下，却有不同的含义。 标量尺度我们初中学过胡克定律，即在弹性范围内，弹簧的伸长和所施加的力成正比：用公式表达就是：这里k是一个实数，表明了弹簧的性质，当弹簧压缩时，该式任然成立，只是F和X前面变成了负号。 向量尺度高中时，力F变成了向量，位移X也变成了向量，什么是向量？既有大小又有方向的量">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=58050585ab64413a7e00d664">
+<meta property="og:image" content="https://upload.wikimedia.org/math/c/2/c/c2c4a7f57947a786b00bba66d08b109d.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/8/6/d/86da33a2c3cd947e5f16204b318316a4.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/3/4/b/34b65e12029ae168960d1c9eff25af89.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/5/9/2/592adc2e6dfa4e530f6c6ed8ab0adc7e.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/3/6/5/3656bd0ec0ce0db254cd6811a2c55ca7.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/3/5/6/356a9dd169b3b1a3c46a7b7f3b45e22e.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/4/c/c/4ccadb755e0341de810dfb042398393a.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/9/3/1/9316f4f997bdc82d4e542d60f1d7a36f.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/d/e/d/ded054e7d889411fa4939d8e332ad868.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/e/2/9/e291f1c74a5566f37ec8312f519aaf80.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/a/b/1/ab1197927fb212a74f1c7089cbc2bd25.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/4/8/8/488fe40b82c21427721978efaeeb7db4.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/c/0/a/c0a407b507307f8e90706358c8e3bd69.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/b/1/7/b17c6106b271dabda1004ae7dea54ec2.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/a/5/3/a53bb7bcfb07782194d1e79155de53b3.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/c/0/a/c0a407b507307f8e90706358c8e3bd69.png">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=580505caab64413a7e00d665">
+<meta property="og:image" content="https://leanote.com/api/file/getImage?fileId=580505f1ab64413b9500d839">
+<meta property="og:image" content="https://upload.wikimedia.org/math/9/0/e/90eaf7c749f925e3a5eaf687386d5f2c.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/a/e/c/aecbfa4bea6f9a032b6c7cc9d234d5e5.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/6/2/c/62c6926dad354afe74fe19fe4718f43d.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/f/c/b/fcb48cb2247c2cc11b434d03989e3e45.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/2/f/4/2f4eadfcf3df11a293feeb8734e9d63d.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/7/1/b/71b9bb4183a6d739235f7ab84a0b4d24.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/5/c/a/5cad5e0b4ab1703d44d08430bc58142d.png">
+<meta property="og:image" content="https://upload.wikimedia.org/math/4/d/6/4d67e1104f6ca7c0c4f9a3a06b7852f3.png">
+<meta property="og:updated_time" content="2018-08-24T02:15:10.689Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一步一步认识胡克定律">
+<meta name="twitter:description" content="初中学了简单了胡克定律，高中的时候力变成了向量，而大学里应力应变都变成了2阶张量，同样是胡克定律，在不同的尺度下，却有不同的含义。 标量尺度我们初中学过胡克定律，即在弹性范围内，弹簧的伸长和所施加的力成正比：用公式表达就是：这里k是一个实数，表明了弹簧的性质，当弹簧压缩时，该式任然成立，只是F和X前面变成了负号。 向量尺度高中时，力F变成了向量，位移X也变成了向量，什么是向量？既有大小又有方向的量">
+<meta name="twitter:image" content="https://leanote.com/api/file/getImage?fileId=58050585ab64413a7e00d664">
+  
+    <link rel="alternate" href="/atom.xml" title="Zhaojun&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Zhaojun&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hook-s-law" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/17/hook-s-law/" class="article-date">
+  <time datetime="2016-08-17T17:11:10.000Z" itemprop="datePublished">2016-08-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/随记/">随记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      一步一步认识胡克定律
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>初中学了简单了胡克定律，高中的时候力变成了向量，而大学里应力应变都变成了2阶张量，同样是胡克定律，在不同的尺度下，却有不同的含义。</p>
+<h1 id="标量尺度"><a href="#标量尺度" class="headerlink" title="标量尺度"></a>标量尺度</h1><p>我们初中学过胡克定律，即在弹性范围内，弹簧的伸长和所施加的力成正比：<br><img src="https://leanote.com/api/file/getImage?fileId=58050585ab64413a7e00d664" alt=""><br>用公式表达就是：<br><img src="https://upload.wikimedia.org/math/c/2/c/c2c4a7f57947a786b00bba66d08b109d.png" alt=""><br>这里k是一个实数，表明了弹簧的性质，当弹簧压缩时，该式任然成立，只是F和X前面变成了负号。</p>
+<h1 id="向量尺度"><a href="#向量尺度" class="headerlink" title="向量尺度"></a>向量尺度</h1><p>高中时，力F变成了向量，位移X也变成了向量，什么是向量？既有大小又有方向的量就是向量，和标量尺度的胡克定律比较，引进向量其实就是引进了方向，但是各个方向上任然满足标量形式的胡克定律，胡克定律的公式没变，只是其中的F和X是向量了，这时如果将胡克定律在直角坐标系下展开：<br><img src="https://upload.wikimedia.org/math/8/6/d/86da33a2c3cd947e5f16204b318316a4.png" alt=""><br>即：<br><img src="https://upload.wikimedia.org/math/3/4/b/34b65e12029ae168960d1c9eff25af89.png" alt=""><br>其中i从1到3.<br>所以，胡克定律：<br><img src="https://upload.wikimedia.org/math/5/9/2/592adc2e6dfa4e530f6c6ed8ab0adc7e.png" alt=""><br>任然成立，只是这里的F和X是向量，而kappa不再是一个实数（标量），而是一个2阶张量。</p>
+<h1 id="张量尺度"><a href="#张量尺度" class="headerlink" title="张量尺度"></a>张量尺度</h1><p>在大学里学了连续介质力学，这时的胡克定律变成了：<br><img src="https://upload.wikimedia.org/math/3/6/5/3656bd0ec0ce0db254cd6811a2c55ca7.png" alt=""><br>其中sigma是应力张量（2阶），epsilon是应变张量（2阶），而c是一个刚度张量（4阶）<br>在直角坐标系下，应力张量和应变张量可以表示为矩阵的形式：<br><img src="https://upload.wikimedia.org/math/3/5/6/356a9dd169b3b1a3c46a7b7f3b45e22e.png" alt=""><br>而4阶的刚度张量在直角坐标系下：<br><img src="https://upload.wikimedia.org/math/4/c/c/4ccadb755e0341de810dfb042398393a.png" alt=""><br>一共有3*3*3*3=81个元素。<br>所以直角坐标系下的胡克定律可以写为：<br><img src="https://upload.wikimedia.org/math/9/3/1/9316f4f997bdc82d4e542d60f1d7a36f.png" alt=""></p>
+<h2 id="刚度张量的简化"><a href="#刚度张量的简化" class="headerlink" title="刚度张量的简化"></a>刚度张量的简化</h2><p>有以上可知，刚度张量有3*3*3*3=81个元素，那能不能将他简化呢？</p>
+<p>###小的对称minor symmetries<br>由于柯西应力张量的对称性：<br><img src="https://upload.wikimedia.org/math/d/e/d/ded054e7d889411fa4939d8e332ad868.png" alt=""><br>我们可以得到：<br><img src="https://upload.wikimedia.org/math/e/2/9/e291f1c74a5566f37ec8312f519aaf80.png" alt=""><br>同样的，由于应变张量的对称性，我们可以得到：<br><img src="https://upload.wikimedia.org/math/a/b/1/ab1197927fb212a74f1c7089cbc2bd25.png" alt=""><br>这样刚度张量的元素个数就从81个减小到了36个。<br>在直角坐标系下，这时的应力应变张量可以表示为：<br><img src="https://upload.wikimedia.org/math/4/8/8/488fe40b82c21427721978efaeeb7db4.png" alt=""><br>而刚度张量的36个元素可以表示为：<br><img src="https://upload.wikimedia.org/math/c/0/a/c0a407b507307f8e90706358c8e3bd69.png" alt=""></p>
+<blockquote>
+<p>注意：由于对称性，这时的刚度张量已从4阶变成了2阶。</p>
+</blockquote>
+<h3 id="大的对称major-symmetries"><a href="#大的对称major-symmetries" class="headerlink" title="大的对称major symmetries"></a>大的对称major symmetries</h3><p>由于应力应变张量同时变化，应力应变关系可以从应变能量密度（U）的微分得到：<br><img src="https://upload.wikimedia.org/math/b/1/7/b17c6106b271dabda1004ae7dea54ec2.png" alt=""><br>由于积分顺序的任意性，我们可以得到：<br><img src="https://upload.wikimedia.org/math/a/5/3/a53bb7bcfb07782194d1e79155de53b3.png" alt=""><br>这样刚度张量的元素个数就从36个减小到了21个。<br>在直角坐标系下，这时的刚度张量的矩阵表示：<br><img src="https://upload.wikimedia.org/math/c/0/a/c0a407b507307f8e90706358c8e3bd69.png" alt=""><br>是一个对称矩阵，所以只有6+5+4+3+2+1=21个元素。</p>
+<p>###其他对称性<br>以上的两种对称一般的材料都会有，而接下来的这些对称性确是只有在特定条件下才能满足：<br><img src="https://leanote.com/api/file/getImage?fileId=580505caab64413a7e00d665" alt=""></p>
+<h4 id="正交对称Orthotropic"><a href="#正交对称Orthotropic" class="headerlink" title="正交对称Orthotropic"></a>正交对称Orthotropic</h4><p>正交对称有两个对称面（可以证明：有两个对称面一定会有第三个），典型的正交对称材料是木头<br><img src="https://leanote.com/api/file/getImage?fileId=580505f1ab64413b9500d839" alt=""><br>木头的性质沿着半径方向，圆周方向以及轴向是不同的。<br>在直角坐标系下，如果坐标基矢量e1，e2，e3垂直于3个对称面，那么刚度张量元素个数可以从21个减小到9个：<br><img src="https://upload.wikimedia.org/math/9/0/e/90eaf7c749f925e3a5eaf687386d5f2c.png" alt=""></p>
+<h4 id="横断对称Transversely-isotropic"><a href="#横断对称Transversely-isotropic" class="headerlink" title="横断对称Transversely isotropic"></a>横断对称Transversely isotropic</h4><p>横断对称有一个对称轴，很多复合材料和生物薄膜材料都是横断对称的。<br>在直角坐标系下，如果坐标基矢量e3和对称轴重合，那么刚度张量元素个数可以进一步从9个减小到5个：<br><img src="https://upload.wikimedia.org/math/a/e/c/aecbfa4bea6f9a032b6c7cc9d234d5e5.png" alt=""></p>
+<h4 id="立方对称cubic-symmetry"><a href="#立方对称cubic-symmetry" class="headerlink" title="立方对称cubic symmetry"></a>立方对称cubic symmetry</h4><p>立方对称是最简单的各向异性情况,这时刚度矩阵元素个数为3个：<br><img src="https://upload.wikimedia.org/math/6/2/c/62c6926dad354afe74fe19fe4718f43d.png" alt=""></p>
+<h4 id="各向同性isotropic"><a href="#各向同性isotropic" class="headerlink" title="各向同性isotropic"></a>各向同性isotropic</h4><p>终于到了各向同性，这一我们最常应用的情况，各向同性的材料，顾名思义，材料在各个方向上的性质是一样的，也可以说它有无穷多个对称面。各向同性的材料，刚度矩阵元素个数为2。<br>在直角坐标系下，公式表示为：<br><img src="https://upload.wikimedia.org/math/f/c/b/fcb48cb2247c2cc11b434d03989e3e45.png" alt=""><br>矩阵表示为：<br><img src="https://upload.wikimedia.org/math/2/f/4/2f4eadfcf3df11a293feeb8734e9d63d.png" alt=""><br>其中，lamda等于：<br><img src="https://upload.wikimedia.org/math/7/1/b/71b9bb4183a6d739235f7ab84a0b4d24.png" alt=""><br>u等于：<br><img src="https://upload.wikimedia.org/math/5/c/a/5cad5e0b4ab1703d44d08430bc58142d.png" alt=""><br>所以上式变为：<br><img src="https://upload.wikimedia.org/math/4/d/6/4d67e1104f6ca7c0c4f9a3a06b7852f3.png" alt=""></p>
+<p>#总结<br>仿佛坐了一次过山车，从初中学过的最简单形式的胡克定律开始（此时弹性系数k为一实数），到向量形式的胡克定律（此时k为一2阶张量，含9个元素），最后到连续介质力学中张量形式的胡克定律（此时k为一4阶张量，含81个元素），然后由于对称性，元素个数不断减少，在各向同性材料里，k只有两个元素。从中可以看出，升阶其实就是将更多方向性考虑进去，这样就需要更多的元素表示不同的方向，而对称性又决定了我们可以用同一元素代表不同方向的性质。我们从“1”出发，最后回到了“2”。</p>
+<p>#参考文献<br><a href="https://en.wikipedia.org/wiki/Hooke%27s_law#Tensor_expression_of_Hooke.27s_law" target="_blank" rel="noopener">wikipedia_Hooke’s law</a><br><a href="https://en.wikipedia.org/wiki/Linear_elasticity" target="_blank" rel="noopener">Linear elasticity</a><br><a href="https://en.wikipedia.org/wiki/Orthotropic_material" target="_blank" rel="noopener">Orthotropic material</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/17/hook-s-law/" data-id="cjl7e0uju000dfs5s3ce13sms" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tricks/">tricks</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/17/latex-summary/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          LATEX使用总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/17/Bernoulli/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">伯努利家族的恩怨情愁</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cloud9/">cloud9</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ipad/">ipad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/latex/">latex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stories/">stories</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tricks/">tricks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zotero/">zotero</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/坚果云/">坚果云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/法国/">法国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/相机/">相机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移民/">移民</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/蒙特利尔/">蒙特利尔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/驾照/">驾照</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/ipad/" style="font-size: 10px;">ipad</a> <a href="/tags/latex/" style="font-size: 10px;">latex</a> <a href="/tags/stories/" style="font-size: 10px;">stories</a> <a href="/tags/tricks/" style="font-size: 20px;">tricks</a> <a href="/tags/zotero/" style="font-size: 10px;">zotero</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/坚果云/" style="font-size: 10px;">坚果云</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/法国/" style="font-size: 10px;">法国</a> <a href="/tags/相机/" style="font-size: 10px;">相机</a> <a href="/tags/移民/" style="font-size: 20px;">移民</a> <a href="/tags/蒙特利尔/" style="font-size: 15px;">蒙特利尔</a> <a href="/tags/驾照/" style="font-size: 10px;">驾照</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/13/quebec-arriving/">2018年5月蒙特利尔长登3周小记</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/12/procedure-immigration/">移民过程记录</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/30/one_week_in_montreal/">2018年1月蒙特利尔短登一周经验分享</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/02/cloud9/">用github和cloud9创建自己的博客</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/02/ipad/">ipad和电脑双向同步文献的奥秘</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Zhaojun TAO<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
