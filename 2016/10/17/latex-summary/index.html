@@ -1,13 +1,90 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
   
 
   
-  <title>LATEX使用总结 | Zhaojun&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天主要总结了latex的一些基本配置和使用latex进行科技论文写作的基本要素（书写文档，插入表格，插入图片，插入数学公式） latex文档latex是文档书写的利器。 latex文档结构首先来看一个简单的例子：123456789101112131415161718#导言区\documentclass[12pt ,a4paper]&amp;#123;article&amp;#125;\usepackage&amp;#1">
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="latex," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="今天主要总结了latex的一些基本配置和使用latex进行科技论文写作的基本要素（书写文档，插入表格，插入图片，插入数学公式） latex文档latex是文档书写的利器。 latex文档结构首先来看一个简单的例子：123456789101112131415161718#导言区\documentclass[12pt ,a4paper]&amp;#123;article&amp;#125;\usepackage&amp;#1">
 <meta name="keywords" content="latex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LATEX使用总结">
@@ -32,77 +109,224 @@
 <meta name="twitter:title" content="LATEX使用总结">
 <meta name="twitter:description" content="今天主要总结了latex的一些基本配置和使用latex进行科技论文写作的基本要素（书写文档，插入表格，插入图片，插入数学公式） latex文档latex是文档书写的利器。 latex文档结构首先来看一个简单的例子：123456789101112131415161718#导言区\documentclass[12pt ,a4paper]&amp;#123;article&amp;#125;\usepackage&amp;#1">
 <meta name="twitter:image" content="https://leanote.com/api/file/getImage?fileId=56dc716aab64417e59004eb8">
-  
-    <link rel="alternate" href="/atom.xml" title="Zhaojun&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/17/latex-summary/"/>
+
+
+  <title> LATEX使用总结 | Zhaojun's Blog </title>
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Zhaojun&#39;s Blog</a>
-      </h1>
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Zhaojun's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
         
-      </nav>
-      <nav id="sub-nav">
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-latex-summary" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/17/latex-summary/" class="article-date">
-  <time datetime="2016-10-17T14:44:18.000Z" itemprop="datePublished">2016-10-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/工具/">工具</a>
-  </div>
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      LATEX使用总结
-    </h1>
+      
+    </ul>
   
 
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                LATEX使用总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-17T14:44:18+00:00" content="2016-10-17">
+              2016-10-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/17/latex-summary/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/17/latex-summary/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <p>今天主要总结了latex的一些基本配置和使用latex进行科技论文写作的基本要素（书写文档，插入表格，插入图片，插入数学公式）</p>
 <h1 id="latex文档"><a href="#latex文档" class="headerlink" title="latex文档"></a>latex文档</h1><p>latex是文档书写的利器。</p>
@@ -162,145 +386,368 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/17/latex-summary/" data-id="cjl7gcq6m000mg95sl5zlldr9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/latex/">latex</a></li></ul>
 
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/latex/" rel="tag">#latex</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/17/hook-s-law/" rel="next" title="一步一步认识胡克定律">
+                <i class="fa fa-chevron-left"></i> 一步一步认识胡克定律
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/02/ipad/" rel="prev" title="ipad和电脑双向同步文献的奥秘">
+                ipad和电脑双向同步文献的奥秘 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
     </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
-  
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
     
-<nav id="article-nav">
-  
-    <a href="/2017/08/02/cloud9/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
+      <div class="ds-thread" data-thread-key="2016/10/17/latex-summary/"
+           data-title="LATEX使用总结" data-url="http://yoursite.com/2016/10/17/latex-summary/">
+      </div>
+    
+  </div>
+
+
+        </div>
         
-          用github和cloud9创建自己的博客
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://of6xzt6jd.bkt.clouddn.com/avatar%E5%A4%B4%E5%83%8F.JPG"
+               alt="Zhaojun TAO" />
+          <p class="site-author-name" itemprop="name">Zhaojun TAO</p>
+          <p class="site-description motion-element" itemprop="description">c'est la vie</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/taozhaojun" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/taozhaojun" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/tao-zhao-jun" target="_blank" title="Zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#latex文档"><span class="nav-number">1.</span> <span class="nav-text">latex文档</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#latex文档结构"><span class="nav-number">1.1.</span> <span class="nav-text">latex文档结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文"><span class="nav-number">1.2.</span> <span class="nav-text">中文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#中文字体"><span class="nav-number">1.2.1.</span> <span class="nav-text">中文字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文字号"><span class="nav-number">1.2.2.</span> <span class="nav-text">中文字号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文重定义"><span class="nav-number">1.2.3.</span> <span class="nav-text">中文重定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于宏包"><span class="nav-number">1.2.4.</span> <span class="nav-text">关于宏包</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格"><span class="nav-number">2.</span> <span class="nav-text">表格</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表格自定义"><span class="nav-number">2.1.</span> <span class="nav-text">表格自定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#列宽"><span class="nav-number">2.1.1.</span> <span class="nav-text">列宽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行宽"><span class="nav-number">2.1.2.</span> <span class="nav-text">行宽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨行跨列表格"><span class="nav-number">2.1.3.</span> <span class="nav-text">跨行跨列表格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格总结"><span class="nav-number">2.2.</span> <span class="nav-text">表格总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片"><span class="nav-number">3.</span> <span class="nav-text">图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#最简单的例子"><span class="nav-number">3.1.</span> <span class="nav-text">最简单的例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂点的情况"><span class="nav-number">3.2.</span> <span class="nav-text">复杂点的情况</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#并排摆放，共享标题"><span class="nav-number">3.2.1.</span> <span class="nav-text">并排摆放，共享标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并排摆放，各有标题"><span class="nav-number">3.2.2.</span> <span class="nav-text">并排摆放，各有标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并排摆放，共享标题，各有子标题"><span class="nav-number">3.2.3.</span> <span class="nav-text">并排摆放，共享标题，各有子标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于画图片的软件"><span class="nav-number">3.2.4.</span> <span class="nav-text">关于画图片的软件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学公式"><span class="nav-number">4.</span> <span class="nav-text">数学公式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些简单的数学公式"><span class="nav-number">4.1.</span> <span class="nav-text">一些简单的数学公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#稍微高级的应用"><span class="nav-number">4.2.</span> <span class="nav-text">稍微高级的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#括号"><span class="nav-number">4.2.1.</span> <span class="nav-text">括号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#长公式"><span class="nav-number">4.2.2.</span> <span class="nav-text">长公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多行公式"><span class="nav-number">4.2.3.</span> <span class="nav-text">多行公式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#每个子公式都有编号"><span class="nav-number">4.2.3.1.</span> <span class="nav-text">每个子公式都有编号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#只有一个编号在中间位置"><span class="nav-number">4.2.3.2.</span> <span class="nav-text">只有一个编号在中间位置</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小结"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-    </a>
-  
-  
-    <a href="/2016/08/17/hook-s-law/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">一步一步认识胡克定律</div>
-    </a>
-  
-</nav>
+    </main>
 
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
   
-</article>
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhaojun TAO</span>
+</div>
 
-</section>
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
         
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a></li></ul>
-    </div>
-  </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cloud9/">cloud9</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ipad/">ipad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/latex/">latex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stories/">stories</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tricks/">tricks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zotero/">zotero</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/坚果云/">坚果云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/法国/">法国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/相机/">相机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移民/">移民</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/蒙特利尔/">蒙特利尔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/驾照/">驾照</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/cloud9/" style="font-size: 10px;">cloud9</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/ipad/" style="font-size: 10px;">ipad</a> <a href="/tags/latex/" style="font-size: 10px;">latex</a> <a href="/tags/stories/" style="font-size: 10px;">stories</a> <a href="/tags/tricks/" style="font-size: 20px;">tricks</a> <a href="/tags/zotero/" style="font-size: 10px;">zotero</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/坚果云/" style="font-size: 10px;">坚果云</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/法国/" style="font-size: 10px;">法国</a> <a href="/tags/相机/" style="font-size: 10px;">相机</a> <a href="/tags/移民/" style="font-size: 20px;">移民</a> <a href="/tags/蒙特利尔/" style="font-size: 15px;">蒙特利尔</a> <a href="/tags/驾照/" style="font-size: 10px;">驾照</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/08/13/quebec-arriving/">2018年5月蒙特利尔长登3周小记</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/12/procedure-immigration/">移民过程记录</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/30/one_week_in_montreal/">2018年1月蒙特利尔短登一周经验分享</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/02/ipad/">ipad和电脑双向同步文献的奥秘</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/02/cloud9/">用github和cloud9创建自己的博客</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 Zhaojun TAO<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
     </div>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+
+
+
   
-</nav>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
     
+  
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"taozhaojungithub"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
 
 
-  </div>
+
+  
+  
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
 </body>
 </html>
